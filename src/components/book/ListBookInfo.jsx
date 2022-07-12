@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-
+import './bookinfo.css';
 import EditBookInfo from "./EditBookInfo";
 
 const ListBookInfo = () => {
@@ -39,7 +39,11 @@ const ListBookInfo = () => {
   return (
     <Fragment>
       {" "}
+       
+           <div>        
+      <h1 class=" text-center">Book Details</h1>
       <table class="table mt-5 text-center">
+        
         <thead>
           <tr>
             <th>Book Name</th>
@@ -79,6 +83,7 @@ const ListBookInfo = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </Fragment>
   );
 };

@@ -11,11 +11,17 @@ function App() {
   const [menuOpen,setMenuOpen] = useState(false)
   return (
     <div className="app">
+          <Topbar/>
+          <div className="sections">
     
     
-    
+               <Intro/>
                <Detail/>
+               <ListStudent/>
+               <ListBookInfo/>
+               </div>
               
+
     
               
       

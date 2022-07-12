@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 
+
 const EditStudent = ({ student }) => {
   const [first_name, setFirst_name] = useState(student.first_name);
   const [last_name, setLast_name] = useState(student.last_name);
@@ -27,6 +28,7 @@ const EditStudent = ({ student }) => {
 
   return (
     <Fragment>
+    <div className="edit">
       <button
         type="button"
         class="btn btn-warning"
@@ -93,6 +95,7 @@ const EditStudent = ({ student }) => {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </Fragment>
   );

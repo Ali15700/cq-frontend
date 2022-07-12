@@ -18,7 +18,7 @@
                 background-color: $mainColor;
                 border-radius: 50%;
                 display: flex;
-                align-items: flex-end;
+                align-items: flex-center;
                 justify-content: center;
                 float: right;
                 overflow: hidden;
@@ -29,6 +29,7 @@
 
                 img{
                     height: 90%;
+                    margin-left: 70px;
 
                     @include mobile{
                         height: 50%;
