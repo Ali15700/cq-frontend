@@ -70,14 +70,16 @@ const EditBookInfo = ({ book }) => {
                 onChange={e => setBorrow_by(e.target.value)}
               />
               <input
-                type="date"
+                type="text"
                 className="form-control"
+                placeholder='ReturnDate MM/DD/YYYY'
                 value={borrow_date}
                 onChange={e => setBorrow_date(e.target.value)}
               />
               <input
-                type="date"
+                type="text"
                 className="form-control"
+                placeholder='ReturnDate MM/DD/YYYY'
                 value={return_date}
                 onChange={e => setReturn_date(e.target.value)}
               />

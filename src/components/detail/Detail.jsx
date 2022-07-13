@@ -50,20 +50,7 @@ const Detail = () => {
   const onSubmitForm_book = async e => {
     e.preventDefault();
     try {
-      let breakCondition = true;
-      if(book_name ==="" && author === ""){
-        alert("Please enter a book and author name");
-        breakCondition = false;
-      }
-      else if(book_name ===""){
-        alert("Please enter a book name");
-        breakCondition = false;
-      }
-      else if(author ===""){
-        alert("Please enter a author name");
-        breakCondition = false;
-      }
-      else if(breakCondition){
+     
       const body = { book_name, author, borrow_by, borrow_date, return_date};
       const response = await fetch("http://localhost:5000/book", {
         method: "POST",
@@ -72,7 +59,7 @@ const Detail = () => {
       });
 
       window.location = "/";
-    }
+    
     } catch (err) {
       console.error(err.message);
     }
@@ -81,7 +68,7 @@ const Detail = () => {
 
   return (
     <Fragment >
-      <div className="detail">
+      <div className="detail" id="detail">
        <div class="one">
                    <h1>Add Information</h1>
         </div>

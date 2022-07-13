@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-
+import './edit.css';
 import EditStudent from "./EditStudent";
 
 const ListStudent = () => {
@@ -37,23 +37,22 @@ const ListStudent = () => {
   console.log(student);
 
   return (
-    <Fragment>
-      {" "}
+    <Fragment >
+     <div className="list" id="student">
+     <div class="one">
+                   <h1>Student List</h1>
+        </div>
       <table class="table mt-5 text-center">
         <thead>
-          <tr>
-            <th>First Name</th>
+          <tr class="p-3 mb-2 bg-primary text-white">
+            <th >First Name</th>
             <th>Last Name</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
         </thead>
         <tbody>
-          {/*<tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr> */}
+          
           {student.map(student => (
             <tr key={student.student_id}>
               <td>{student.first_name}</td>
@@ -73,6 +72,7 @@ const ListStudent = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </Fragment>
   );
 };

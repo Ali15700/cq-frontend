@@ -1,0 +1,10 @@
+.list{
+    background-color:#5391bbf1;
+    scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none;
+}
+td{
+    color:#040344;
+    font-weight:bold;
+}

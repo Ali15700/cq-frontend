@@ -40,12 +40,14 @@ const ListBookInfo = () => {
     <Fragment>
       {" "}
        
-           <div>        
-      <h1 class=" text-center">Book Details</h1>
+      <div className="list" id="book">        
+      <div class="one">
+                   <h1>Book List</h1>
+        </div>
       <table class="table mt-5 text-center">
         
         <thead>
-          <tr>
+          <tr class="p-3 mb-2 bg-primary text-white">
             <th>Book Name</th>
             <th>Author</th>
             <th>Borrow By</th>
@@ -56,11 +58,7 @@ const ListBookInfo = () => {
           </tr>
         </thead>
         <tbody>
-          {/*<tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>john@example.com</td>
-          </tr> */}
+         
           {book.map(book => (
             <tr key={book.book_id}>
               <td>{book.book_name}</td>
