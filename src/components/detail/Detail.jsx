@@ -37,8 +37,8 @@ const Detail = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
-
-      window.location = "/";
+      window.location = "/#student";
+      window.location.reload();
     }
     } 
    
@@ -51,14 +51,32 @@ const Detail = () => {
     e.preventDefault();
     try {
      
+      let breakCondition = true;
       const body = { book_name, author, borrow_by, borrow_date, return_date};
+      if(book_name === '' && author === ''){
+        alert('Please fill it in');
+        breakCondition = false;
+      }
+      else if(book_name ===''){
+        alert('Please enter a book name');
+        breakCondition = false;
+      }
+      else if(author === ''){
+        alert('Please enter a author');
+        breakCondition = false;
+      }
+      else if(breakCondition){
       const response = await fetch("http://localhost:5000/book", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body)
       });
 
-      window.location = "/";
+      window.location = "/#book";
+      
+      window.location.reload();
+      
+    }
     
     } catch (err) {
       console.error(err.message);

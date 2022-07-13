@@ -20,7 +20,9 @@ const EditStudent = ({ student }) => {
         }
       );
 
-      window.location = "/";
+      window.location = "/#student";
+      
+      window.location.reload();
     } catch (err) {
       console.error(err.message);
     }

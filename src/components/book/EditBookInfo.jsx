@@ -24,7 +24,11 @@ const EditBookInfo = ({ book }) => {
         }
       );
 
-      window.location = "/";
+     
+      
+      window.location = "/#book";
+      
+      window.location.reload();
     } catch (err) {
       console.error(err.message);
     }
